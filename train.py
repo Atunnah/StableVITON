@@ -14,6 +14,11 @@ from cldm.logger import ImageLogger
 from cldm.model import create_model, load_state_dict
 from utils import save_args
 
+import os
+
+# Thiết lập biến môi trường CUDA_VISIBLE_DEVICES
+os.environ["CUDA_VISIBLE_DEVICES"] = "0"
+
 def build_args():
     parser = argparse.ArgumentParser()
     parser.add_argument("--config_name", type=str, default=None)
