@@ -56,7 +56,7 @@ def build_args():
     
     args = parser.parse_args()
     
-    args.config_path = opj("./configs", f"{args.config_name}.yaml")
+    args.config_path = opj("./StableVITON/configs", f"VITONHD.yaml")
     args.n_gpus = len(os.environ["CUDA_VISIBLE_DEVICES"].split(","))
     args.devices = [i for i in range(args.n_gpus)]
     args.strategy = "auto"
